@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="style.css">
+  <title>Hang the monster</title>
+  <style>
+    body {
+      background-color: rgb(79, 69, 59);
+    }
+    .text-center {
+      color: rgb(242, 30, 30);
+      margin-top: 20px;
+      font-size: 40px;
+    }
+    .text-center p {
+      font-size: 25px;
+      color: rgb(226, 230, 226);
+    }
+    .float-right {
+      color: rgb(199, 199, 199);
+      font-size: 20px;
+    }
+    .btn btn-info {
+      color: hotpink;
+    }
+    @media only screen and (max-width: 600px) {
+    #hangmanPic {
+      width: fit-content;
+    }
+  }
+  </style>
+</head>
+<body background="cr.jpg" alt="">
+<div class="container">
+  <h1 class="text-center">ДҮҮЖЛЭГДСЭН НЬ</h1>
+  <div class="float-right">ТАНЫ АМЬ: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+  <div class="text-center">
+    <img id='hangmanPic' src="./images/0.png" alt="">
+    <p>Араатан амьтдын нэрсийг таагаарай!</p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <div id="keyboard"></div>
+    <button class="btn btn-info" onClick="reset()">ДАХИН ЭХЛҮҮЛЭХ</button>
+  </div> 
+</div>
+
+<script src='hangman.js'></script>
+</body>
+</html>
